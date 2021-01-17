@@ -1,0 +1,107 @@
+.slider{
+    width: auto;
+    height: auto;
+    position: relative;
+    padding-top: 320px;
+}
+
+.slider>img{
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s;
+    width: auto;
+    height: auto;
+}
+
+.slider input[name='slide_switch'] {
+    display: none;
+}
+
+.slider label {
+    margin: 18px 0 0 18px;
+    border: 3px solid #999;
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    opacity: 0.6;
+}
+
+.slider input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+
+.slider input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.slider input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+ul {
+    text-align: left;
+    list-style: inside;
+}
+
+ul.block{
+    width:360px; 
+    height: 335px; 
+    border-top:3px solid black; 
+    align-content: center;
+}
+
+.col-1 {
+    width: 58px;
+    margin: 1px;
+    display: inline-block;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > div[class*='col-'] {
+    display: flex;
+}
+
+/* Hover effects */
+.card {
+    transition: -webkit-transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.01, 1.01);
+}
+
+/* Responsive design for image heights */
+@media (min-width: 576px) { 
+    .card-img-top {
+        height: 50vw;
+    }
+}
+
+@media (min-width: 768px) { 
+    .card-img-top {
+        height: 30vw;
+    }
+}
+
+@media (min-width: 992px) { 
+    .card-img-top {
+        height: 20vw;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .card-img-top {
+        height: 20vw;
+    }
+}
